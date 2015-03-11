@@ -1,0 +1,20 @@
+@mixin bp($point) {
+  @if $point == sp-land {
+    @media (min-width: 321px) { @content; }
+  }
+  @else if $point == sp-port {
+    @media (max-width: 320px) { @content; }
+  }
+  @else if $point == tablet {
+    @media (max-width: 600px) { @content; }
+  }
+  @else if $point == desktop-rg {
+    @media (min-width : 720px)  { @content; }
+  }
+  @else if $point == desktop-lg {
+    @media (min-width : 1224px)  { @content; }
+  }
+  @else if $point == desktop-xlg {
+    @media (min-width : 1824px)  { @content; }
+  }
+}
